@@ -97,10 +97,11 @@ int ft_printf(const char *s, ...)
 	va_end(ap);
 	return len;
 }
-
+/*
 #include <stdio.h>
 int main()
 {
+	printf("%d\n\n", (ft_printf("%x\n", 0XE7342)));
 	printf("%d\n\n", (ft_printf("%d\n", -12345678)));
 	printf("%d\n", (ft_printf("%s\n", "AVE MARIE")));
 }
