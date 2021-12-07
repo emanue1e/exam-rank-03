@@ -19,7 +19,7 @@ char *ft_strchr(const char *str, int c)
 		return s;
 	return NULL;
 }
-
+/*
 char *ft_substr(char *s, unsigned int start, size_t len)
 {
 	char *str;
@@ -39,6 +39,23 @@ char *ft_substr(char *s, unsigned int start, size_t len)
 	}
 	str[i] = '\0';
 	return str;
+}*/
+
+char *ft_substr(char *s, unsigned int start, size_t len)
+{
+	size_t i = 0, j = 0;
+	char *substr;
+	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!substr)
+		return NULL;
+	while (s[i])
+	{
+		if (i >= start && j < len)
+			substr[j++] = s[i];
+		i++;
+	}
+	substr[j] = '\0';
+	return substr;
 }
 
 char *ft_strjoin(char *s1, char *s2)
