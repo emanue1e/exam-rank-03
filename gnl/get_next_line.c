@@ -23,18 +23,18 @@ char *ft_strchr(const char *str, int c)
 char *ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t i = 0, j = 0;
-	char *substr;
-	substr = (char *)malloc(sizeof(char) * (len + 1));
-	if (!substr)
+	char *dest;
+	dest = (char *)malloc(sizeof(char) * (len + 1));
+	if (!dest)
 		return NULL;
 	while (s[i])
 	{
 		if (i >= start && j < len)
-			substr[j++] = s[i];
+			dest[j++] = s[i];
 		i++;
 	}
-	substr[j] = '\0';
-	return substr;
+	dest[j] = '\0';
+	return dest;
 }
 
 char *ft_strjoin(char *s1, char *s2)
