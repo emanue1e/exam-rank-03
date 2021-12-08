@@ -1,8 +1,8 @@
 #include "get_next_line.h"
 
-size_t ft_strlen(char *str)
+int ft_strlen(char *str)
 {
-	size_t i = 0;
+	int i = 0;
 	while (str[i])
 		i++;
 	return i;
@@ -20,9 +20,9 @@ char *ft_strchr(const char *str, int c)
 	return NULL;
 }
 
-char *ft_substr(char *s, unsigned int start, size_t len)
+char *ft_substr(char *s, int start, int len)
 {
-	size_t i = 0, j = 0;
+	int i = 0, j = 0;
 	char *dest;
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (!dest)
