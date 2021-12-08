@@ -39,10 +39,10 @@ char *ft_substr(char *s, int start, int len)
 
 char *ft_strjoin(char *s1, char *s2)
 {
-	char *dest;
-	int i = 0, j = 0;
 	if (!s1 || !s2)
 		return NULL;
+	int i = 0, j = 0;
+	char *dest;
 	dest = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!dest)
 		return NULL;
