@@ -8,22 +8,20 @@ int main(int ac, char **av)
 		i = 0;
 		while (i < 255)
 			tab[i++] = 0;
-		i = 2;
-		while (i > 0)
+		i = 1;
+		while (i < 3)
 		{
 			j = 0;
 			while (av[i][j])
 			{
-				if (i == 2 && tab[(unsigned char)av[i][j]] == 0)
-					tab[(unsigned char)av[i][j]] = 1;
-				if (i == 1 && tab[(unsigned char)av[i][j]] == 1)
+				if (tab[(unsigned char)av[i][j]] == 0)
 				{
-					tab[(unsigned char)av[i][j]] = 2;
+					tab[(unsigned char)av[i][j]] = 1;
 					write(1, &av[i][j], 1);
 				}
 				j++;
 			}
-			i--;
+			i++;
 		}
 	}
 	write(1, "\n", 1);
