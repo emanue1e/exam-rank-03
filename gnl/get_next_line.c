@@ -63,7 +63,7 @@ char *ft_strjoin(char *s1, char *s2)
 
 char *ft_tail(char *tail, int *n)
 {
-	char *str = ft_substr(tail, *n + 1, ft_strlen(tail));
+	char *str = ft_substr(tail, *n + 1, ft_strlen(tail) - *n);
 	free(tail);
 	return str;
 }
